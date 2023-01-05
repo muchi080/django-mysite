@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="jumbotron">
+    <h2>サイズ詳細</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">サイズ名</th>
+          <th scope="col">服の種類</th>
+          <th scope="col">着丈</th>
+          <th scope="col">胸囲</th>
+          <th scope="col">肩幅</th>
+          <th scope="col">袖丈</th>
+          <th scope="col">着心地</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td>{{ size_detail.name }}</td>
+          <td>{{ size_detail.type }}</td>
+          <td>{{ size_detail.body_length }}</td>
+          <td>{{ size_detail.chest }}</td>
+          <td>{{ size_detail.shoulder }}</td>
+          <td>{{ size_detail.arm }}</td>
+          <td>{{ size_detail.comfort }}</td>
+
+        </tr>          
+
+    </tbody>
+
+    </table>        
+    
+    <a href="{{request.META.HTTP_REFERER}}">戻る</a>
+{% endblock %}

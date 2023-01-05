@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+<form method="post">{% csrf_token %}
+
+    <h3>本当に "{{ object }}" を削除しますか？</h3>
+    
+    <input type="submit" value="削除する">
+    
+    </form>
+<a href="{{request.META.HTTP_REFERER}}">戻る</a>
+
+{% endblock %}

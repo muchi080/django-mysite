@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container">
+    <h2>サイズ平均</h2>
+    <table class="table">
+     <thead>
+      <tr>
+         <th><h4>全体平均</h4></th>
+         <th><a>{{counts}}サイズの平均を出しています</a></th>
+     </tr>
+     </thead>
+     <tbody>
+     
+      <tr>
+        {% for heikin in HeikinList %}
+         <td>
+             <h4>{{heikin}}</h4>
+         </td>
+         {% endfor %}
+     </tr>
+     
+     </tbody>       
+    </table>
+
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2"><h4>アウター平均</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for outer in outers %}
+                <td>
+                    <h4>{{outer}}</h4>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>   
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2"><h4>長袖トップス平均</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for long in longs %}
+                <td>
+                    <h4>{{long}}</h4>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table> 
+    <br>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2"><h4>半袖トップス平均</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for short in shorts %}
+                <td>
+                    <h4>{{short}}</h4>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>    
+    <br>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2"><h4>スウェット/パーカー平均</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for sweat in sweats %}
+                <td>
+                    <h4>{{sweat}}</h4>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    
+</div>
+<a href="{{request.META.HTTP_REFERER}}">戻る</a>
+{% endblock %}

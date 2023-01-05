@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block main %}
+<h2>サイズ一覧</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>サイズ名</th>
+      <th>着心地</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for size in size_list %}    
+    <tr>
+      <td>{{ size.name }}</td>
+      <td>{{ size.comfort }}</td>
+      <td>
+        <a href="detail/{{ size.id }}">詳細</a>
+        <a>／</a>
+        <a href="update/{{ size.id }}">編集</a>
+        <a>／</a>
+        <a href="delete/{{ size.id }}">削除する</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a href="{{request.META.HTTP_REFERER}}">戻る</a>
+
+{% endblock %}
