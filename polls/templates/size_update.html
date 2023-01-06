@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 {% block main %}
+<div>
 <h1>サイズの編集</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="保存">
 </form>
-<a href="{{request.META.HTTP_REFERER}}">戻る</a>
+</div>
+<br>
+<br>
+<br>
+<a class="btn btn-primary" href="{{request.META.HTTP_REFERER}}" role="button">戻る</a>
+
 
 {% endblock %}
