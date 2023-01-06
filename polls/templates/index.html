@@ -1,20 +1,29 @@
 {% extends "base.html" %}
 {% block main %}
 <h2>会員ページ</h2>
-<p>{{ user }}さん、こんにちは！</p>
+<u >{{ user }}さん、こんにちは！</u>
+<br>
+<br>
+<div  class="container" >
+    <ul class="sidebar-nav">
+        <ul class="sidebar-brand">
+    <h3 ><a class="badge badge-secondary" href="{% url 'size' %}">サイズ入力</a></h3>
+    <h3><a class="badge badge-secondary" href="{% url 'list' %}">サイズ一覧</a></h3>
+    <h3><a  class="badge badge-secondary" href="{% url 'ave' %}">平均表示</a></h3>
 
-<aside class="sidebar-gray bg-gray">
-<h4><li><a href="{% url 'size' %}">サイズ入力</a></li></h4>
-<h4><li><a href="{% url 'list' %}">サイズ一覧</a></li></h4>
-<h4><li><a href="{% url 'ave' %}">平均表示</a></li></h4>
+    <u>
+    <p><a class="badge badge-success" href="{% url 'logout' %}">ログアウト</a></p>
+    <p><a class="badge badge-success" href="{% url 'password_change' %}">パスワードの変更</a></p>
+    <p><a class="badge badge-success" href="{% url 'password_reset' %}">パスワードを忘れた場合</a></p>
+    </u>
+        </ul>
+    </ul>
+        
 
-<u>
-<p><a href="{% url 'logout' %}">ログアウト</a></p>
-<p><a href="{% url 'password_change' %}">パスワードの変更</a></p>
-<p><a href="{% url 'password_reset' %}">パスワードを忘れた場合</a></p>
-</u>
 
-</aside>
+</div>
+
+
 
 
 
