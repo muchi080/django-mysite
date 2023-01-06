@@ -67,4 +67,4 @@ Output
   
 ### テストアカウント
 ユーザー名：test1   
-Pass：1234tete
+パスワード：1234tete
